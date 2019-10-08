@@ -30,7 +30,7 @@ def merge_sort( arr ):
 
 
 # STRETCH: implement an in-place merge sort algorithm
-def merge_in_place(arr, start, mid, end):
+def merge_in_place(arr, start, middle, end):
     # TO-DO
     """merge two sorted arrays in place - truly in place this time
     i had some other versions which used two arrays"""
@@ -45,7 +45,6 @@ def merge_in_place(arr, start, mid, end):
         #print(arr)
         middle +=1
         start +=1
-        ar2_len = len(arr2)
     return arr
 
 def merge_sort_in_place(arr, l, r): 
