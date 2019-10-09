@@ -13,9 +13,11 @@ def merge( arrA, arrB ):
           arrB = arrB[1:]
       else:
         if len(arrA) == 0:
-          merged_arr[i:] = arrB
+          merged_arr[i] = arrB[0]
+          arrB = arrB[1:]
         else:
-          merged_arr[i:] = arrA
+          merged_arr[i] = arrA[0]
+          arrA = arrA[1:]
     
     return merged_arr
 
@@ -52,7 +54,7 @@ def merge_sort_in_place(arr, l, r):
     middle = 1
     end = 2
     while end!=len(arr):
-        arr = merge_true_in_place(arr, start, middle, end)
+        arr = merge_in_place(arr, start, middle, end)
         middle +=1
         end +=1
     return arr
