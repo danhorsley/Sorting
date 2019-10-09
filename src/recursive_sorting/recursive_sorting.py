@@ -50,10 +50,12 @@ def merge_in_place(arr, start, middle, end):
     return arr
 
 def merge_sort_in_place(arr, l, r): 
+    if arr ==[]:
+      return []
     start = 0
     middle = 1
     end = 2
-    while end!=len(arr):
+    while end!=len(arr)+1:
         arr = merge_in_place(arr, start, middle, end)
         middle +=1
         end +=1
